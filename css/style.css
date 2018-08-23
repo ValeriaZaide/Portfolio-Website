@@ -4,43 +4,82 @@ Background and text color (White) : #FFFFFF
 Sections color (Pink): #FC1580
 Border and Nav color (Bright Blue): #23ABBF
 Text color (Dark Gray): #4A4A4A
-Button colo (Darker Blue): #1B9EB1
+Button color  (Darker Blue): #1B9EB1
+yellow: #FDE23B
 */
 
-
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:600" rel="stylesheet">
 body {
   font-family: 'Open Sans', sans-serif;
-  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #4A4A4A;
+  letter-spacing: 0.43px;
+  text-align: left;
 }
 h1 {
-  /* MY WORK: (sections) */
-font-family: Raleway-SemiBold, sans-serif;
+font-family: 'Raleway', sans-serif;
 font-size: 48px;
-color: #FFFFFF;
+font-weight: 600;
+line-height: 1.6;
 letter-spacing: 0.58px;
-text-align: center;
+margin: 0;
 }
 h2 {
-  /*project Names */
-  font-family: OpenSans-SemiBold, sans-serif;
-  font-size: 30px;
-  color: #4A4A4A;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.6;
   letter-spacing: 0.43px;
 }
-h3 {
-  /*Hi, my name is Valeria*/
-  font-family: 'Open Sans-SemiBold', sans-serif;
-  font-size: 20px;
-  color: #4A4A4A;
+h3, .h3 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.6;
   letter-spacing: 0.43px;
 }
-p {
-  font-family: OpenSans-Regular, sans-serif;
-  font-size: 20px;
-  color: #4A4A4A;
-  letter-spacing: 0.43px;
+#work h1, #contact h1 {
+  background-color: #FC1580;
+  color: #ffffff;
   text-align: center;
+  text-transform: uppercase;
 }
-
-/* Hi there. My name is: */
+.heading-border {
+  border-bottom: 3px solid #23ABBF;
+  border-top: 3px solid #23ABBF;
+  padding: 5px 0;
+  margin: 40px 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+img {
+  width: 100%;
+}
+header img {
+  max-width: 300px;
+}
+nav ul{
+  list-style-type: none;
+  padding: 0;
+}
+a {
+  color: #23ABBF;
+}
+a:visited {
+  /* visited link */
+  color: #FC1580;
+}
+a:hover,
+a: focus {
+  text-decoration: none; /* No underlining when hovering over a link */
+}
+a:active {
+  /* selected link */
+  color: #FDE23B;
+}
+header{
+  border-bottom: 3px solid #23ABBF;
+}
