@@ -41,6 +41,7 @@ header {
   border-bottom: 3px solid #23ABBF;
   position:fixed;
   width: 100%;
+  padding: 0;
 }
 header img {
   max-width: 300px;
@@ -77,6 +78,8 @@ nav li a:hover, nav li a:active {
   margin: 40px 0;
 }
 .container {
+  display: inline-block;
+  width: 100%
   max-width: 1200px;
   margin: 0 auto;
   padding-left: 20px;
