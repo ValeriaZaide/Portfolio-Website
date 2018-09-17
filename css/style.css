@@ -131,11 +131,17 @@ nav li a:hover, nav li a:active {
 #work .row:last-child {
   border-bottom: none;
 }
+#work {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+}
 #intro {
   padding-top: 100px;
 }
 #intro p{
-  text-align: center;
+  display: inline-block;
+  text-align: left;
+  margin: 0;
 }
 #intro svg {
   display: block;
@@ -143,17 +149,19 @@ nav li a:hover, nav li a:active {
   width: 80%;
 }
 #intro img {
-  max-width: 100%;
-  height: auto;
+  border: 5px dashed #23ABBF;
   margin-top: 14px;
 }
 #contact {
   text-align: center;
 }
-}
 #work img {
   margin-top: 20px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+}
+#intro .resume {
+  margin-left: 20px;
+  color: #23ABBF;
 }
 .icon {
   display: inline-block;
@@ -202,24 +210,11 @@ a:active {
 }
 img {
   width: 100%;
-  height: auto;
 }
-.image-text {
+.profile-img1 {
   display: none;
 }
-.plane {
-  animation-duration: 4s;
-  animation-name: color-change;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
 /*Resposive*/
-@media (max-width: 1280px) {
-  .profile-img1 {
-    display: none;
-  }
-}
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991px) {
   .col100 {
@@ -276,7 +271,7 @@ img {
     margin-top: 10px;
   }
   img {
-    width: 60%;
+    width: 85%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -286,6 +281,9 @@ img {
   }
   .profile-img2 {
     display: none;
+  }
+  .profile-img1 {
+    display: block;
   }
   #intro svg {
     display: none;
@@ -326,8 +324,8 @@ img {
     display: none;
   }
   #intro p {
-    margin: 10px;
-    text-align: justify;
+    margin: 0px;
+    text-align: left;
   }
   #contact p {
     margin: 0px 10px;
@@ -341,14 +339,9 @@ img {
     margin-bottom: 20px;
   }
   .profile-img1 {
-    max-width: 40%;
     margin: 0 auto;
   }
   .profile-img2 {
     display: none;
   }
-}
-@keyframes color-change {
-  from {fill: #0D8799}
-  to {fill: #54D0E1}
 }
