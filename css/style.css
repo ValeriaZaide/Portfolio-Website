@@ -246,11 +246,26 @@ img {
   font-size: 26px;
   font-weight: bold;
 }
+.project {
+  position: relative;
+}
 .project-details {
   display: none;
-  width: 80%;
-  height: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   margin: 0;
+  padding: 145px 0;
+  background: rgba(0,0,0,0.9);
+  text-align: center;
+}
+.airplane-flight {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
 }
 /*Resposive*/
 /* Medium devices (tablets, less than 992px) */
@@ -403,4 +418,8 @@ img {
   .profile-img2 {
     display: none;
   }
+}
+@keyframes color-change {
+  from: {fill:#0D8799};
+  to: {fill:#50E3C2};
 }
