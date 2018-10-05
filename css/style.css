@@ -43,6 +43,7 @@ header {
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
+  z-index: 999;
 }
 header img {
   max-width: 300px;
@@ -141,6 +142,7 @@ header nav li a:hover, nav li a:active {
 #work {
   background-image: url("../img/background.jpg");
   background-size: cover;
+  background-repeat: repeat;
 }
 #intro {
   padding-top: 100px;
@@ -162,7 +164,6 @@ header nav li a:hover, nav li a:active {
   text-align: center;
 }
 #work img {
-  margin-top: 20px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
 }
 #intro .resume {
@@ -249,23 +250,48 @@ img {
 .project {
   position: relative;
 }
-.project-details {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
+.image {
+  opacity: 1;
+  display: block;
   width: 100%;
-  margin: 0;
-  padding: 145px 0;
-  background: rgba(0,0,0,0.9);
-  text-align: center;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
 }
-.airplane-flight {
-  animation-duration: 4s;
+.project-details {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%)
+ }
+ .project:hover .image {
+   opacity: 0.5;
+ }
+ .project:hover .project-details {
+   opacity: 1;
+ }
+ .text {
+  background-color: #4A4A4A;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.world-map {
+  width: 80%;
+}
+.plane {
+  animation-duration: 2s;
   animation-name: color-change;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
+}
+@keyframes color-change {
+  from: {fill:#0D8799}
+  to: {fill:#50E3C2}
 }
 /*Resposive*/
 /* Medium devices (tablets, less than 992px) */
@@ -327,7 +353,6 @@ img {
     margin-top: 10px;
   }
   img {
-    width: 85%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -351,6 +376,10 @@ img {
   }
   #casestudy {
     margin: 0 auto;
+}
+  #work img {
+  margin-top: 20px;
+}
 }
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
@@ -393,7 +422,7 @@ img {
   #contact p {
     margin: 0px 10px;
   }
-  #contact svg {
+  #contact .icon {
     width: 24px;
     height: 24px;
   }
@@ -418,8 +447,4 @@ img {
   .profile-img2 {
     display: none;
   }
-}
-@keyframes color-change {
-  from: {fill:#0D8799};
-  to: {fill:#50E3C2};
 }
