@@ -160,8 +160,7 @@ header nav li a:hover, nav li a:active {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 #intro .resume {
-  margin-left: 20px;
-  color: #168292;
+  text-align: center;
 }
 #content {
   display: inline-block;
